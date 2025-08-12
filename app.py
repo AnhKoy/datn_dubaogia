@@ -1,16 +1,3 @@
-import os
-import sys
-import subprocess
-
-# Danh sách thư viện cần cài
-REQUIRED_LIBS = ["streamlit", "pandas", "joblib", "scikit-learn", "gdown"]
-
-for lib in REQUIRED_LIBS:
-    try:
-        __import__(lib)
-    except ImportError:
-        print(f"📦 Cài đặt thư viện: {lib} ...")
-        subprocess.check_call([sys.executable, "-m", "pip", "install", lib])
 
 import streamlit as st
 import pandas as pd
@@ -64,5 +51,6 @@ if st.button("Dự đoán giá"):
         st.success(f"💰 Giá dự đoán: {pred:,.2f} tỷ VNĐ")
     except Exception as e:
         st.error(f"❌ Lỗi: {e}")
+
 
 
