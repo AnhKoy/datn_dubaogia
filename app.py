@@ -22,7 +22,7 @@ else:
     model = loaded
 
 # Load CSV riêng từ repo
-df = pd.read_csv("bds_dat_clean.csv")
+df = pd.read_csv("bds_dat_clean (1).csv")
 
 st.title("🔍 Dự đoán giá Bất động sản")
 
@@ -50,3 +50,4 @@ if st.button("Dự đoán giá"):
         st.success(f"💰 Giá dự đoán: {pred:,.2f} tỷ VNĐ")
     except Exception as e:
         st.error(f"❌ Lỗi: {e}")
+
