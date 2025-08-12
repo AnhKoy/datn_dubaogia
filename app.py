@@ -33,7 +33,7 @@ dien_tich = st.number_input("Diện tích (m²)", 10.0, 2000.0, 100.0)
 mat_tien = st.number_input("Mặt tiền (m)", 0.5, 50.0, 5.0)
 duong_vao = st.number_input("Đường vào (m)", 0.5, 50.0, 3.0)
 
-loai_bds = st.selectbox("Loại BĐS", sorted(df["Loại BDS"].dropna().unique()))
+loai_bds = st.selectbox("Loại BDS", sorted(df["Loại BDS"].dropna().unique()))
 giay_to = st.selectbox("Giấy tờ pháp lý", sorted(df["Giấy tờ pháp lý"].dropna().unique()))
 xa_phuong = st.selectbox("Xã/Phường", sorted(df["Xã/Phường"].dropna().unique()))
 quan_huyen = st.selectbox("Quận/Huyện", sorted(df["Quận/Huyện"].dropna().unique()))
@@ -117,6 +117,7 @@ if st.button("Dự đoán giá"):
 #         st.success(f"💰 Giá dự đoán: {pred:,.2f} tỷ VNĐ")
 #     except Exception as e:
 #         st.error(f"❌ Lỗi: {e}")
+
 
 
 
