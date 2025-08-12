@@ -27,7 +27,7 @@ mean_target = loaded_obj.get("mean_target")
 cat_cols = loaded_obj.get("cat_cols")
 
 # ===== 3. Load CSV để lấy danh sách giá trị cho dropdown =====
-DATA_FILE = "bds_dat_clean.csv"
+DATA_FILE = "bds_dat_clean (1).csv"
 if not os.path.exists(DATA_FILE):
     st.error(f"❌ Không tìm thấy file dữ liệu '{DATA_FILE}'. Hãy upload file CSV hoặc đính kèm khi deploy.")
     st.stop()
@@ -213,6 +213,7 @@ if st.button("Dự đoán giá"):
 #         st.success(f"💰 Giá dự đoán: {pred:,.2f} tỷ VNĐ")
 #     except Exception as e:
 #         st.error(f"❌ Lỗi: {e}")
+
 
 
 
